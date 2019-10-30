@@ -12,7 +12,7 @@
    <!-- TODO: put <tr *ngFor=""></tr> here -->
    <tr *ngFor="let info of satellites">
         <th>{{info.name}}</th>
-        <th>{{info.type}}</th>
+        <th [class.warning]= info.shouldShowWarning()>{{info.type}}</th>
         <th>{{info.operational}}</th>
         <th>{{info.orbitType}}</th>
         <th>{{info.launchDate}}</th>
